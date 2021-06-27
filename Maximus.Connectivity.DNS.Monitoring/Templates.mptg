@@ -1,0 +1,70 @@
+<TemplateGroup>
+  <Instances>
+    <Instance ID="Instance1cb8bbbf42bb4bd8ba0ce5a2d4aaa2da" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.UnitMonitor" Version="1.0.0.0">
+      <UnitMonitorConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <MonitorType>Maximus.Connectivity.DNS.Dig.UnitMonitor</MonitorType>
+        <MonitorOperationalStates>
+          <OperationalState>
+            <OperationalStateId>OK</OperationalStateId>
+            <OperationalStateDisplayName>OK</OperationalStateDisplayName>
+            <MonitorTypeStateId>OK</MonitorTypeStateId>
+            <HealthState>Success</HealthState>
+          </OperationalState>
+          <OperationalState>
+            <OperationalStateId>LogicalError</OperationalStateId>
+            <OperationalStateDisplayName>LogicalError</OperationalStateDisplayName>
+            <MonitorTypeStateId>LogicalError</MonitorTypeStateId>
+            <HealthState>Warning</HealthState>
+          </OperationalState>
+          <OperationalState>
+            <OperationalStateId>SystemError</OperationalStateId>
+            <OperationalStateDisplayName>SystemError</OperationalStateDisplayName>
+            <MonitorTypeStateId>SystemError</MonitorTypeStateId>
+            <HealthState>Error</HealthState>
+          </OperationalState>
+        </MonitorOperationalStates>
+        <ParentMonitor>Health!System.Health.AvailabilityState</ParentMonitor>
+        <Accessibility>Public</Accessibility>
+        <Id>Dig.Monitor</Id>
+        <DisplayName>DNS Lookup (Dig) Monitor</DisplayName>
+        <Description>Perform a test DNS query and verify results.</Description>
+        <Target>Maximus.Connectivity.DNS.Dig</Target>
+        <Enabled>true</Enabled>
+        <Category>AvailabilityHealth</Category>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <AlertAutoResolve>true</AlertAutoResolve>
+        <AlertOnState>Warning</AlertOnState>
+        <AlertPriority>Normal</AlertPriority>
+        <AlertSeverity>MatchMonitorHealth</AlertSeverity>
+        <AlertName>DSN Dig Query Failed</AlertName>
+        <AlertDescription>DSN lookup (dig) query is failed (CRITICAL) or returned an unexpected result (WARNING).
+
+Message: $Data/Context/Property[@Name='Message']$
+
+DNS Server answer(s):
+$Data/Context/Property[@Name='Answer']$</AlertDescription>
+        <ConfirmDelivery>false</ConfirmDelivery>
+      </UnitMonitorConfig>
+    </Instance>
+    <Instance ID="Instance339c75f4018f48f1ae64e58271022301" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.PerformanceCollectionRule" Version="1.0.0.0">
+      <PerformanceCollectionRuleConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Id>Dig.PerformanceCollectionRule</Id>
+        <DisplayName>DNS Lookup (Dig) Performance Collection Rule</DisplayName>
+        <Description>Description for the new performance collection rule.</Description>
+        <Category>PerformanceCollection</Category>
+        <ConfirmDelivery>false</ConfirmDelivery>
+        <Target>Maximus.Connectivity.DNS.Dig</Target>
+        <Enabled>true</Enabled>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <DiscardLevel>100</DiscardLevel>
+        <ConditionDetectionId>CD</ConditionDetectionId>
+        <DataSourceId>DS_LookupTime</DataSourceId>
+        <DataSourceType>Maximus.Connectivity.DNS.Performance.TimeTakenMs.DataSource</DataSourceType>
+        <CollectToDB>true</CollectToDB>
+        <CollectToDW>true</CollectToDW>
+      </PerformanceCollectionRuleConfig>
+    </Instance>
+  </Instances>
+</TemplateGroup>

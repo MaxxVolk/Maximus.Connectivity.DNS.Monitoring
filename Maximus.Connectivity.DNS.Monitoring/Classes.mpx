@@ -1,0 +1,95 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <EntityTypes>
+      <ClassTypes>
+        <ClassType ID="Maximus.Connectivity.DNS.Dig" Abstract="false" Accessibility="Public"
+                   Base="MCM!Maximus.Connectivity.Monitoring.Test" Hosted="true">
+          <Property ID="HostOrDomainName" Type="string"/>
+          <Property ID="QueryType" Type="string"/>
+          <Property ID="Recursion" Type="bool" DefaultValue="true"/>
+          <Property ID="RetriesCount" Type="int" DefaultValue="3"/>
+          <Property ID="TimeoutSeconds" Type="int" DefaultValue="5"/>
+          <Property ID="Port" Type="int" DefaultValue="53"/>
+          <Property ID="UseTcpOnly" Type="bool" DefaultValue="false"/>
+          <Property ID="ResultEvaluation" Type="enum" EnumType="Maximus.Connectivity.DNS.Dig.Result.Enumeration"/>
+          <Property ID="ResultEvaluationExpression" Type="string" MaxLength="8000"/>
+        </ClassType>
+      </ClassTypes>
+      <EnumerationTypes>
+        <EnumerationValue ID="Maximus.Connectivity.DNS.Dig.Result.Enumeration" Accessibility="Public"/>
+        <EnumerationValue ID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.OperationSuccessful" Accessibility="Public" Parent="Maximus.Connectivity.DNS.Dig.Result.Enumeration"/>
+        <EnumerationValue ID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.SpecificIPList" Accessibility="Public" Parent="Maximus.Connectivity.DNS.Dig.Result.Enumeration"/>
+        <EnumerationValue ID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.SpecificNameList" Accessibility="Public" Parent="Maximus.Connectivity.DNS.Dig.Result.Enumeration"/>
+        <EnumerationValue ID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.RegexMatch" Accessibility="Public" Parent="Maximus.Connectivity.DNS.Dig.Result.Enumeration"/>
+      </EnumerationTypes>
+    </EntityTypes>
+  </TypeDefinitions>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <!-- Enumeration: Maximus.Connectivity.DNS.Dig.Result.Enumeration -->
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig.Result.Enumeration">
+          <Name>DNS Dig Result Interpretation</Name>
+          <Description>Instructs how to validate DNS Dig probe results.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.OperationSuccessful">
+          <Name>Operation Completed Successfully</Name>
+          <Description>Operation shlould completed successfully, regarless of results.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.SpecificIPList">
+          <Name>Expect IP Address List</Name>
+          <Description>Operation should return a specific list of IP adresses.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.SpecificNameList">
+          <Name>Expect Name List</Name>
+          <Description>Operation should return a specific list of names.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.RegexMatch">
+          <Name>Match Regular Expression</Name>
+          <Description>Operation result should match a regular expression.</Description>
+        </DisplayString>
+        <!-- Class: Maximus.Connectivity.DNS.Dig -->
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig">
+          <Name>DNS Dig (NSLookup) Probe</Name>
+          <Description>When created, this test object will add the 'DNS Dig Monitor' monitor for the selected destination. The destination will be used as a DNS server. The 'Collect Performance Data' option is supported.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="HostOrDomainName">
+          <Name>Host or Domain Name</Name>
+          <Description>Host or Domain Name to use in the DNS query. This is NOT a DNS servers address. The parent destination (which is host for this test object) will be interpreted as a DNS server.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="QueryType">
+          <Name>Query Type</Name>
+          <Description>Type of DNS record to look up. Example types are A, AAAA, SRV, NS, SOA, CNAME, etc. If no type cpecified, then A is used.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="ResultEvaluation">
+          <Name>Result Evaluation</Name>
+          <Description>Select how the query result is interpreted complete the test successfully.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="Recursion">
+          <Name>Use Recursion</Name>
+          <Description>Use recursive name resolution.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="RetriesCount">
+          <Name>Retries Count</Name>
+          <Description>Retry operation within a single test.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="TimeoutSeconds">
+          <Name>Timeout (Seconds)</Name>
+          <Description>Query timeout in seconds.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="Port">
+          <Name>Port</Name>
+          <Description>DNS server port. Default port is 53.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="UseTcpOnly">
+          <Name>Use TCP Only</Name>
+          <Description>Enforce TCP protocol over default UDP one. Most of DNS servers do not allow TCP by default.</Description>
+        </DisplayString>
+        <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="ResultEvaluationExpression">
+          <Name>Result Evaluation Expression</Name>
+          <Description>Expression to eveluate test success. Can be a list of names or IPs, or a regular expression (see Result Evaluation). When list, use ',' or ';' or '|' to separate items.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

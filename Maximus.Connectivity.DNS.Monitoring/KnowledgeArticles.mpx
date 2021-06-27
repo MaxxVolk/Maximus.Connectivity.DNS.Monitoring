@@ -1,0 +1,62 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <KnowledgeArticles>
+        <KnowledgeArticle ElementID="Maximus.Connectivity.DNS.Dig" Visible="true">
+          <MamlContent>
+            <section xmlns="http://schemas.microsoft.com/maml/2004/10">
+              <title>Description</title>
+              <para>
+                This object performs DNS lookup (dig) test to monitor either DNS server health or zone health or both.
+              </para>
+              <para>
+                Collect Performance Data is supported: YES
+              </para>
+              <table>
+                <title>Monitors and Rules</title>
+                <tableHeader>
+                  <row>
+                    <entry>
+                      <para>Monitor/Rule</para>
+                    </entry>
+                    <entry>
+                      <para>Name</para>
+                    </entry>
+                    <entry>
+                      <para>Has Threshold</para>
+                    </entry>
+                    <entry>
+                      <para>Alert Suppression</para>
+                    </entry>
+                  </row>
+                </tableHeader>
+                <row>
+                  <entry>
+                    <para>Monitor</para>
+                  </entry>
+                  <entry>
+                    <para>DNS Dig Monitor</para>
+                  </entry>
+                  <entry>
+                    <para>No</para>
+                  </entry>
+                  <entry>
+                    <para>Supported</para>
+                  </entry>
+                </row>
+              </table>
+            </section>
+            <section xmlns="http://schemas.microsoft.com/maml/2004/10">
+              <title>Operations</title>
+              <sections>
+                <section xmlns="http://schemas.microsoft.com/maml/2004/10">
+                  <title>Dig or NS Lookup</title>
+                </section>
+              </sections>
+            </section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

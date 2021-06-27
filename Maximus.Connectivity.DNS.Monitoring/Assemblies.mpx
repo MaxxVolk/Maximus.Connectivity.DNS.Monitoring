@@ -1,0 +1,19 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Resources>
+    <DeployableAssembly ID="Maximus.Connectivity.DNS.System.Buffers.DeployableAssembly" Accessibility="Public" HasNullStream="false"
+                        FileName="System.Buffers.dll"
+                        QualifiedName="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <DeployableAssembly ID="Maximus.Connectivity.DNS.DnsClient.DeployableAssembly" Accessibility="Public" HasNullStream="false"
+                        FileName="DnsClient.dll"
+                        QualifiedName="DnsClient, Version=1.4.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424">
+      <Dependency ID="Maximus.Connectivity.DNS.System.Buffers.DeployableAssembly"/>
+    </DeployableAssembly>
+    <DeployableAssembly ID="Maximus.Connectivity.DNS.Modules.DeployableAssembly" Accessibility="Public" HasNullStream="false"
+                        FileName="Maximus.Connectivity.DNS.Modules.dll"
+                        QualifiedName="Maximus.Connectivity.DNS.Modules, Version=1.0.0.9, Culture=neutral, PublicKeyToken=fd5098a6a3259696">
+      <Dependency ID="MBL!Maximus.Base.Library.ManagedWorkflowBase.DeployableAssembly"/>
+      <Dependency ID="Maximus.Connectivity.DNS.DnsClient.DeployableAssembly"/>
+      <Dependency ID="Maximus.Connectivity.DNS.System.Buffers.DeployableAssembly"/>
+    </DeployableAssembly>
+  </Resources>
+</ManagementPackFragment>
