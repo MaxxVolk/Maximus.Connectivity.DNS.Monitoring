@@ -34,11 +34,11 @@
         </DisplayString>
         <DisplayString ElementID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.OperationSuccessful">
           <Name>Operation Completed Successfully</Name>
-          <Description>Operation shlould completed successfully, regarless of results.</Description>
+          <Description>Operation should completed successfully, regardless of results.</Description>
         </DisplayString>
         <DisplayString ElementID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.SpecificIPList">
           <Name>Expect IP Address List</Name>
-          <Description>Operation should return a specific list of IP adresses.</Description>
+          <Description>Operation should return a specific list of IP addresses.</Description>
         </DisplayString>
         <DisplayString ElementID="Maximus.Connectivity.DNS.Dig.Result.Enumeration.SpecificNameList">
           <Name>Expect Name List</Name>
@@ -59,7 +59,7 @@
         </DisplayString>
         <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="QueryType">
           <Name>Query Type</Name>
-          <Description>Type of DNS record to look up. Example types are A, AAAA, SRV, NS, SOA, CNAME, etc. If no type cpecified, then A is used.</Description>
+          <Description>Type of DNS record to look up. Example types are A, AAAA, SRV, NS, SOA, CNAME, etc. If no type specified, then A is used.</Description>
         </DisplayString>
         <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="ResultEvaluation">
           <Name>Result Evaluation</Name>
@@ -87,7 +87,7 @@
         </DisplayString>
         <DisplayString ElementID="Maximus.Connectivity.DNS.Dig" SubElementID="ResultEvaluationExpression">
           <Name>Result Evaluation Expression</Name>
-          <Description>Expression to eveluate test success. Can be a list of names or IPs, or a regular expression (see Result Evaluation). When list, use ',' or ';' or '|' to separate items.</Description>
+          <Description>Expression to evaluate test success. Can be a list of names or IPs, or a regular expression (see Result Evaluation). When list, use ',' or ';' or '|' to separate items.</Description>
         </DisplayString>
       </DisplayStrings>
     </LanguagePack>

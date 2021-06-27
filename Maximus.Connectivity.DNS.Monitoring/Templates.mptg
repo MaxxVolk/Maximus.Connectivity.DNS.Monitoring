@@ -50,8 +50,8 @@ $Data/Context/Property[@Name='Answer']$</AlertDescription>
     <Instance ID="Instance339c75f4018f48f1ae64e58271022301" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.PerformanceCollectionRule" Version="1.0.0.0">
       <PerformanceCollectionRuleConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
         <Id>Dig.PerformanceCollectionRule</Id>
-        <DisplayName>DNS Lookup (Dig) Performance Collection Rule</DisplayName>
-        <Description>Description for the new performance collection rule.</Description>
+        <DisplayName>DNS Lookup (Dig) Response Performance Collection Rule</DisplayName>
+        <Description>Collect DNS Server response time</Description>
         <Category>PerformanceCollection</Category>
         <ConfirmDelivery>false</ConfirmDelivery>
         <Target>Maximus.Connectivity.DNS.Dig</Target>

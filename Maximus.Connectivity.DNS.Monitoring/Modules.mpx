@@ -32,7 +32,7 @@
         <ModuleImplementation>
           <Composite>
             <MemberModules>
-              <DataSource ID="DS_TCP" TypeID="Maximus.Connectivity.DNS.Dig.DataSource" />
+              <DataSource ID="DS_Dig" TypeID="Maximus.Connectivity.DNS.Dig.DataSource" />
               <ConditionDetection ID="CD_Reachable" TypeID="System!System.ExpressionFilter">
                 <Expression>
                   <And>
@@ -78,8 +78,8 @@
                 </Expression>
               </ConditionDetection>
               <ConditionDetection ID="CD_PerfMapper" TypeID="Perf!System.Performance.DataGenericMapper">
-                <ObjectName>TCP Connect</ObjectName>
-                <CounterName>TimeTakenMs</CounterName>
+                <ObjectName>DNS Query</ObjectName>
+                <CounterName>Time Taken Ms</CounterName>
                 <InstanceName />
                 <Value>$Data/Property[@Name='TimeTakenMs']$</Value>
               </ConditionDetection>
@@ -87,7 +87,7 @@
             <Composition>
               <Node ID="CD_PerfMapper">
                 <Node ID="CD_Reachable">
-                  <Node ID="DS_TCP" />
+                  <Node ID="DS_Dig" />
                 </Node>
               </Node>
             </Composition>
