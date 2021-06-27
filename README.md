@@ -4,6 +4,8 @@ Monitor DNS Server or zone health with synthetic transactions.
 
 This management pack extends Maximus Connectivity Monitoring SCOM management pack by adding DNS Server connectivity monitoring. See https://github.com/MaxxVolk/Maximus.Connectivity.Monitoring for details.
 
+Read the blog article for detailed description and screenshot examples: https://maxcoreblog.com/2021/06/27/dns-server-extension-for-maximus-connectivity-monitoring-scom-mp/
+
 This management pack adds one monitor:
   - DNS Lookup (Dig) Monitor
 
